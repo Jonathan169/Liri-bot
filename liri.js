@@ -40,11 +40,13 @@ else{
 
 }
 else if(arg==="search-concert"){
+  arg2= process.argv.slice(3).join("");
   var queryUrl = "https://rest.bandsintown.com/artists/" + arg2 + "/events?app_id=node&date=upcoming";
 axios
 .get(queryUrl)
 .then(function(resp){
   console.log("\n--------------------------------------------")
+  var count=0;
 for(let i=0;i<resp.data.length;i++){
   if(resp.data[i].datetime){
   var date=resp.data[i].datetime.split("T")[0];
@@ -54,10 +56,11 @@ for(let i=0;i<resp.data.length;i++){
     "longitude: "+resp.data[i].venue.longitude+"\n",
     "latitide: "+resp.data[i].venue.latitude+"\n",
     "--------------------------------------------\n")
+    count++;
   }
-  else{
-    console.log("sorry no matches found")
-  }
+}
+if(count<1){
+  console.log("sorry no matches or not on Tour")
 }
 })
 }
