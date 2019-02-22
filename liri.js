@@ -3,7 +3,6 @@ require("dotenv").config();
 var keys = require("./keys.js");
 var axios= require('axios')
 var fs=require("fs");
-var inq= require('inquirer')
 
 var Spotify = require('node-spotify-api');
 
@@ -14,20 +13,28 @@ var arg2= process.argv.slice(3).join("-");
 
 if(arg==='search-song'){
 spotify.search({ type: 'track', query: arg2 }, function(err, data) {
-if(data.tracks.items[0].preview_url!==null){
-console.log('\nRESULTS\n\n',
-'Artist name: '+data.tracks.items[0].artists[0].name+'\n',
-'Song name : '+data.tracks.items[0].name+'\n',
-'Album Name: '+data.tracks.items[0].album.name+'\n',
-"Preview Url: "+data.tracks.items[0].preview_url+'\n'
-); 
-}
+  if(data===null){
+  console.log("\n-------------------------\n",
+  "Sorry coud not find song\n",
+  "Check Spelling and spacing",
+  "\n-------------------------\n")
+  }
 else{
-console.log('\nRESULTS\n\n',
-'Artist name: '+data.tracks.items[0].artists[0].name+'\n',
-'Song name : '+data.tracks.items[0].name+'\n',
-'Album Name: '+data.tracks.items[0].album.name+'\n',
-"Preview Url: No preview found \n"); 
+  if(data.tracks.items[0].preview_url!==null){
+  console.log('\nRESULTS\n\n',
+  'Artist name: '+data.tracks.items[0].artists[0].name+'\n',
+  'Song name : '+data.tracks.items[0].name+'\n',
+  'Album Name: '+data.tracks.items[0].album.name+'\n',
+  "Preview Url: "+data.tracks.items[0].preview_url+'\n'
+  ); 
+  }
+  else if(data.tracks.items[0].preview_url==null){
+  console.log('\nRESULTS\n\n',
+  'Artist name: '+data.tracks.items[0].artists[0].name+'\n',
+  'Song name : '+data.tracks.items[0].name+'\n',
+  'Album Name: '+data.tracks.items[0].album.name+'\n',
+  "Preview Url: No preview found \n"); 
+  }
 }
 });
 
@@ -90,6 +97,24 @@ else if(arg==='search-movie'){
     }
   })
 }
-// else if(arg==='do-what-it-says'){
-    
-// }
+else if(arg==='do-what-it-says'){
+  fs.readFile("./random.txt","utf8", function(err,data){
+    spotify.search({ type: 'track', query: data }, function(err, data) {
+      if(data.tracks.items[0].preview_url!==null){
+      console.log('\nRESULTS\n\n',
+      'Artist name: '+data.tracks.items[0].artists[0].name+'\n',
+      'Song name : '+data.tracks.items[0].name+'\n',
+      'Album Name: '+data.tracks.items[0].album.name+'\n',
+      "Preview Url: "+data.tracks.items[0].preview_url+'\n'
+      ); 
+      }
+      else if(data.tracks.items[0].preview_url==null){
+      console.log('\nRESULTS\n\n',
+      'Artist name: '+data.tracks.items[0].artists[0].name+'\n',
+      'Song name : '+data.tracks.items[0].name+'\n',
+      'Album Name: '+data.tracks.items[0].album.name+'\n',
+      "Preview Url: No preview found \n"); 
+      }
+    });
+  })
+}
