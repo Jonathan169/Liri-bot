@@ -16,4 +16,4 @@ Here's what you need to get started!
  last one is an odd ball,
 
  heres the link to a video of me showing off how it works
-<iframe width="560" height="315" src="https://www.youtube.com/embed/so8m-Fr7rTc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://www.youtube.com/watch?v=so8m-Fr7rTc&feature=youtu.be)
