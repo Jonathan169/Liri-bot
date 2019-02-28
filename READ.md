@@ -8,14 +8,15 @@ Here's what you need to get started!
  -Next you need to have your own Spotify-api key and client secret, youll want that in a .env file 
  
  now the keys words to search are a followed and you can use as much spaces as needed
- search-song <song name> 
  
- ![song gif](/gifs/Iwant.gif)
+ Songs | Concerts | Movies | DO what it says
+------------ | ------------- | ------------- | -------------
+search-song songName  | search-concert artist | search-movie movie | do-what-it-says
+![song gif](/gif/searchsong.gif) | ![song gif](/gif/concert.gif) | ![song gif](/gif/movie.gif) | ![song gif](/gif/Iwant.gif)
  
  
- search-concert <artist>
- search-movie <movie>
- do-what-it-says
+ 
+ 
  
  last one is an odd ball,
 
