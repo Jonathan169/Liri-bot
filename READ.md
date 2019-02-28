@@ -1,11 +1,11 @@
-welcome to Liri-bot!
+## welcome to Liri-bot!
 
 Liri-bot is a search tool for looking up information about songs,artist concerts, and movies.
 Here's what you need to get started!
 
- -first you will need to run a npm install to make this work, but you already know that
+ * first you will need to run a npm install to make this work, but you already know that
  
- -Next you need to have your own Spotify-api key and client secret, youll want that in a .env file 
+ * Next you need to have your own Spotify-api key and client secret, youll want that in a .env file 
  
 The following is the syntax and a GIF of how to use each search command, you can use as much spaces as needed during search
 And if the gif is too small theres a link at the bottom to the Full video
