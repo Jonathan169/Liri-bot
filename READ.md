@@ -11,7 +11,7 @@ Here's what you need to get started!
  
  Songs | Concerts | Movies | DO what it says
 ------------ | ------------- | ------------- | -------------
-search-song songName  | search-concert artist | search-movie movie | do-what-it-says
+search-song song name  | search-concert artist | search-movie movie | do-what-it-says
 ![song gif](/gif/searchsong.gif) | ![song gif](/gif/concert.gif) | ![song gif](/gif/movie.gif) | ![song gif](/gif/Iwant.gif)
  
  
@@ -22,4 +22,4 @@ search-song songName  | search-concert artist | search-movie movie | do-what-it-
 
  heres the link to a video of me showing off how it works
 
-https://github.com/Jonathan169/Liri-bot/blob/master/gifs/SearchSong.gif?raw=true
+https://www.youtube.com/embed/so8m-Fr7rTc
