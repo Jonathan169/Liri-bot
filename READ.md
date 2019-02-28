@@ -23,4 +23,4 @@ search-song song name  | search-concert artist | search-movie movie | do-what-it
 
  heres the link to a video of me showing off how it works
 
-https://www.youtube.com/embed/so8m-Fr7rTc
+[![Watch the video](/gif/Untitled.png)](https://www.youtube.com/watch?v=so8m-Fr7rTc&feature=youtu.be)
