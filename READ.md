@@ -9,6 +9,7 @@ Here's what you need to get started!
  
  now the keys words to search are a followed and you can use as much spaces as needed
  search-song <song name> 
+ ![song gif](/gifs/SearchSong.gif)
  search-concert <artist>
  search-movie <movie>
  do-what-it-says
@@ -16,4 +17,5 @@ Here's what you need to get started!
  last one is an odd ball,
 
  heres the link to a video of me showing off how it works
-[![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://www.youtube.com/watch?v=so8m-Fr7rTc&feature=youtu.be)
+
+https://github.com/Jonathan169/Liri-bot/blob/master/gifs/SearchSong.gif?raw=true
