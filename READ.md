@@ -10,7 +10,7 @@ Here's what you need to get started!
  now the keys words to search are a followed and you can use as much spaces as needed
  search-song <song name> 
  
- ![song gif](/gifs/SearchSong.gif)
+ ![song gif](/gifs/Iwant.gif)
  
  
  search-concert <artist>
